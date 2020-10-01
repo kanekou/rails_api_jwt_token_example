@@ -5,7 +5,8 @@ FROM ruby:2.7.1
 RUN apt-get update -qq && apt-get -y install \
     build-essential \
     libpq-dev \
-    nodejs
+    nodejs \
+    vim
 
 # rails用のディレクトリを作成
 RUN mkdir /rails-api
