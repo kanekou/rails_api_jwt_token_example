@@ -1,24 +1,33 @@
-# README
+# devise-jwt sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+denylistを採用．
 
-Things you may want to cover:
+## API
+### sign_up
+- endpoint
+`POST http://localhost:3000/users/sign_in`
+- body
+```
+{"user": {"email": "test@example.com", "password": "password"}}
+```
+- 認証に成功すると，Authorizationにtokenが返る
 
-* Ruby version
+### sign_in
+- endpoint
+`http://localhost:3000/users`
+- body
+```
+{"user": {"email": "test10@example.com", "password": "password"}}
+```
+- 認証に成功するとuserのbodyが返る
 
-* System dependencies
+### memo一覧
+- endpoint
+```
+GET http://localhost:3000/memos
+```
+- Bearerにtokenをセットする．  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 参考
+- [https://www.nightswinger.dev/2020/02/jwt-authentication-for-rails/](https://www.nightswinger.dev/2020/02/jwt-authentication-for-rails/)
+- [hajime-goshima/JWTAuth](https://github.com/hajime-goshima/JWTAuth)
