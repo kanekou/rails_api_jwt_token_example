@@ -3,7 +3,7 @@
 denylistを採用．
 
 ## API
-### sign_up
+### sign_in
 - endpoint
 `POST http://localhost:3000/users/sign_in`
 - parameter
@@ -12,7 +12,7 @@ denylistを採用．
 ```
 - 認証に成功すると，Authorizationにtokenが返る
 
-### sign_in
+### sign_up
 - endpoint
 `http://localhost:3000/users`
 - parameter
