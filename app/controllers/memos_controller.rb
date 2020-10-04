@@ -1,6 +1,6 @@
-class MemoController < ApplicationController
+class MemosController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_memo, only: [:show, :edit, :update, :destroy]
+  # before_action :set_memo, only: [:show, :edit, :update, :destroy]
 
   # GET /memos
   # GET /memos.json
@@ -66,12 +66,12 @@ class MemoController < ApplicationController
   private
 
   # Use callbacks to share common setup or constraints between actions.
-  def set_memo
-    @memo = Memo.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
-  def memo_params
-    params.fetch(:memo, {})
-  end
+  # def set_memo
+  #   @memo = Memo.find(params[:id])
+  # end
+  #
+  # # Only allow a list of trusted parameters through.
+  # def memo_params
+  #   params.fetch(:memo, {})
+  # end
 end
