@@ -6,7 +6,7 @@ denylistを採用．
 ### sign_up
 - endpoint
 `POST http://localhost:3000/users/sign_in`
-- body
+- parameter
 ```
 {"user": {"email": "test@example.com", "password": "password"}}
 ```
@@ -15,7 +15,7 @@ denylistを採用．
 ### sign_in
 - endpoint
 `http://localhost:3000/users`
-- body
+- parameter
 ```
 {"user": {"email": "test10@example.com", "password": "password"}}
 ```
